@@ -1,0 +1,197 @@
+<ul class="sidebar-menu">
+    <li class="header">Menu</li>
+    <li class="treeview" id="g-1">
+        <a href="#">
+            <i class="fa fa-home" aria-hidden="true"></i>
+            <span>Main</span>
+            <span class="label label-primary pull-right">1</span>
+        </a>
+        <ul class="treeview-menu">
+            <li id="g-1-1">
+                <a href="{{ url_for('admin.index') }}">
+                    <i class="fa fa-circle-o"></i> Control panel
+                </a>
+            </li>
+        </ul>
+    </li>
+    <li class="treeview" id="g-2">
+        <a href="#">
+            <i class="fa fa-tags" aria-hidden="true"></i>
+            <span>Tag management</span>
+            <span class="label label-primary pull-right">2</span>
+        </a>
+        <ul class="treeview-menu">
+            <li id="g-2-1">
+                <a href="{{ url_for('admin.tag_add') }}">
+                    <i class="fa fa-circle-o"></i> Add tags
+                </a>
+            </li>
+            <li id="g-2-2">
+                <a href="{{ url_for('admin.tag_list', page=1) }}">
+                    <i class="fa fa-circle-o"></i> Tag list
+                </a>
+            </li>
+        </ul>
+    </li>
+    <li class="treeview" id="g-3">
+        <a href="#">
+            <i class="fa fa-file-video-o" aria-hidden="true"></i>
+            <span>Movie management</span>
+            <span class="label label-primary pull-right">2</span>
+        </a>
+        <ul class="treeview-menu">
+            <li id="g-3-1">
+                <a href="{{ url_for('admin.movie_add') }}">
+                    <i class="fa fa-circle-o"></i> Add movie
+                </a>
+            </li>
+            <li id="g-3-2">
+                <a href="{{ url_for('admin.movie_list', page=1) }}">
+                    <i class="fa fa-circle-o"></i> Movie list
+                </a>
+            </li>
+        </ul>
+    </li>
+    <li class="treeview" id="g-4">
+        <a href="#">
+            <i class="fa fa-film" aria-hidden="true"></i>
+            <span>Preview management</span>
+            <span class="label label-primary pull-right">2</span>
+        </a>
+        <ul class="treeview-menu">
+            <li id="g-4-1">
+                <a href="{{ url_for('admin.preview_add') }}">
+                    <i class="fa fa-circle-o"></i> Add preview
+                </a>
+            </li>
+            <li id="g-4-2">
+                <a href="{{ url_for('admin.preview_list', page=1) }}">
+                    <i class="fa fa-circle-o"></i> Preview list
+                </a>
+            </li>
+        </ul>
+    </li>
+    <li class="treeview" id="g-5">
+        <a href="#">
+            <i class="fa fa-users" aria-hidden="true"></i>
+            <span>User management</span>
+            <span class="label label-primary pull-right">1</span>
+        </a>
+        <ul class="treeview-menu">
+            <li id="g-5-1">
+                <a href="{{ url_for('admin.user_list', page=1) }}">
+                    <i class="fa fa-circle-o"></i> User list
+                </a>
+            </li>
+        </ul>
+    </li>
+    <li class="treeview" id="g-6">
+        <a href="#">
+            <i class="fa fa-comments" aria-hidden="true"></i>
+            <span>Comments management</span>
+            <span class="label label-primary pull-right">1</span>
+        </a>
+        <ul class="treeview-menu">
+            <li id="g-6-1">
+                <a href="{{ url_for('admin.comment_list', page=1) }}">
+                    <i class="fa fa-circle-o"></i> Comments list
+                </a>
+            </li>
+        </ul>
+    </li>
+    <li class="treeview" id="g-7">
+        <a href="#">
+            <i class="fa fa-heart" aria-hidden="true"></i>
+            <span>Collection management</span>
+            <span class="label label-primary pull-right">1</span>
+        </a>
+        <ul class="treeview-menu">
+            <li id="g-7-1">
+                <a href="{{ url_for('admin.moviecol_list', page=1) }}">
+                    <i class="fa fa-circle-o"></i> Collection list
+                </a>
+            </li>
+        </ul>
+    </li>
+    <li class="treeview" id="g-8">
+        <a href="#">
+            <i class="fa fa-file-text" aria-hidden="true"></i>
+            <span>Operation management</span>
+            <span class="label label-primary pull-right">3</span>
+        </a>
+        <ul class="treeview-menu">
+            <li id="g-8-1">
+                <a href="{{ url_for('admin.oplog_list', page=1) }}">
+                    <i class="fa fa-circle-o"></i> Operation log list
+                </a>
+            </li>
+            <li id="g-8-2">
+                <a href="{{ url_for('admin.adminloginlog_list', page=1) }}">
+                    <i class="fa fa-circle-o"></i> Admin login operation list
+                </a>
+            </li>
+            <li id="g-8-3">
+                <a href="{{ url_for('admin.userloginlog_list', page=1) }}">
+                    <i class="fa fa-circle-o"></i> User login operation list
+                </a>
+            </li>
+        </ul>
+    </li>
+    <li class="treeview" id="g-9">
+        <a href="#">
+            <i class="fa fa-lock" aria-hidden="true"></i>
+            <span>Authority management</span>
+            <span class="label label-primary pull-right">2</span>
+        </a>
+        <ul class="treeview-menu">
+            <li id="g-9-1">
+                <a href="{{ url_for('admin.auth_add', page=1) }}">
+                    <i class="fa fa-circle-o"></i> Add authority
+                </a>
+            </li>
+            <li id="g-9-2">
+                <a href="{{ url_for('admin.auth_list', page=1) }}">
+                    <i class="fa fa-circle-o"></i> Permission list
+                </a>
+            </li>
+        </ul>
+    </li>
+    <li class="treeview" id="g-10">
+        <a href="#">
+            <i class="fa fa-user-secret" aria-hidden="true"></i>
+            <span>Role management</span>
+            <span class="label label-primary pull-right">2</span>
+        </a>
+        <ul class="treeview-menu">
+            <li id="g-10-1">
+                <a href="{{ url_for('admin.role_add', page=1) }}">
+                    <i class="fa fa-circle-o"></i> Add role
+                </a>
+            </li>
+            <li id="g-10-2">
+                <a href="{{ url_for('admin.role_list', page=1) }}">
+                    <i class="fa fa-circle-o"></i> Role list
+                </a>
+            </li>
+        </ul>
+    </li>
+    <li class="treeview" id="g-11">
+        <a href="#">
+            <i class="fa fa-user-circle" aria-hidden="true"></i>
+            <span>Admin management</span>
+            <span class="label label-primary pull-right">2</span>
+        </a>
+        <ul class="treeview-menu">
+            <li id="g-11-1">
+                <a href="{{ url_for('admin.admin_add', page=1) }}">
+                    <i class="fa fa-circle-o"></i> Add admin
+                </a>
+            </li>
+            <li id="g-11-2">
+                <a href="{{ url_for('admin.admin_list', page=1) }}">
+                    <i class="fa fa-circle-o"></i> Admin list
+                </a>
+            </li>
+        </ul>
+    </li>
+</ul>

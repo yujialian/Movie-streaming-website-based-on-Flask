@@ -1,0 +1,19 @@
+<div class="col-md-3">
+        <div class="list-group">
+            <a id="m-1" href="{{ url_for('home.user') }}" class="list-group-item">
+                <span class="glyphicon glyphicon-user"></span>&nbsp;User center
+            </a>
+             <a id="m-2" href="{{ url_for('home.pwd') }}" class="list-group-item">
+                <span class="glyphicon glyphicon-lock"></span>&nbsp;Change password
+            </a>
+            <a id="m-3" href="{{ url_for('home.comments',page=1) }}" class="list-group-item">
+                <span class="glyphicon glyphicon-comment"></span>&nbsp;Comments record
+            </a>
+            <a id="m-4" href="{{ url_for('home.loginlog', page=1) }}" class="list-group-item">
+                <span class="glyphicon glyphicon-calendar"></span>&nbsp;Login record
+            </a>
+            <a id="m-5" href="{{ url_for('home.moviecol', page=1) }}" class="list-group-item">
+                <span class="glyphicon glyphicon-heart"></span>&nbsp;Movie collection
+            </a>
+        </div>
+    </div>

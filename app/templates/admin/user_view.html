@@ -1,0 +1,92 @@
+{% extends "admin/admin.html" %}
+{% block css %}
+    <style>
+        .table > tbody > tr > td, .table > tbody > tr > th, .table > tfoot > tr > td, .table > tfoot > tr > th, .table > thead > tr > td, .table > thead > tr > th {
+            vertical-align: middle;
+            text-align: left;
+        }
+
+        .td_bd {
+            font-weight: bold;
+        }
+    </style>
+{% endblock %}
+{% block content %}
+    <section class="content-header">
+        <h1>Micro theater</h1>
+        <ol class="breadcrumb">
+            <li><a href="#"><i class="fa fa-dashboard"></i> User management</a></li>
+            <li class="active">Member information</li>
+        </ol>
+    </section>
+    <section class="content" id="showcontent">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="box box-primary">
+                    <div class="box-header">
+                        <h3 class="box-title">User detail</h3>
+                    </div>
+                    <div class="box-body table-responsive no-padding">
+                        <table class="table table-hover">
+                            <tbody>
+                            <tr>
+                                <td class="td_bd">Number：</td>
+                                <td>{{ user.id }}</td>
+                            </tr>
+                            <tr>
+                                <td class="td_bd">Nickname：</td>
+                                <td>{{ user.name }}</td>
+                            </tr>
+                            <tr>
+                                <td class="td_bd">Email：</td>
+                                <td>{{ user.email }}</td>
+                            </tr>
+                            <tr>
+                                <td class="td_bd">Phone：</td>
+                                <td>{{ user.phone }}</td>
+                            </tr>
+                            <tr>
+                                <td class="td_bd">Head：</td>
+                                <td>
+                                    {% if user.face %}
+                                    <img src="{{ url_for('static', filename='uploads/users/'+user.face) }}" style="width:100px" class="img-responsive" alt="">
+                                    {% else %}
+                                    <img src="holder.js/100x100" style="width:100px" class="img-responsive" alt="">
+                                    {% endif %}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="td_bd">Register time：</td>
+                                <td>
+                                    {{ user.addtime }}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="td_bd">UUID：</td>
+                                <td>
+                                    {{ user.uuid }}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="td_bd">Personal information：</td>
+                                <td>
+                                    {{ user.info }}
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+
+{% block js %}
+    <script>
+        $(document).ready(function () {
+            $("#g-5").addClass("active");
+            $("#g-5-1").addClass("active");
+        })
+    </script>
+{% endblock %}

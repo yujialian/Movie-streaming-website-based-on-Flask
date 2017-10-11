@@ -1,0 +1,14 @@
+click==6.7
+Flask==0.12.2
+Flask-Redis==0.3.0
+Flask-Script==2.0.6
+Flask-SQLAlchemy==2.2
+Flask-WTF==0.14.2
+itsdangerous==0.24
+Jinja2==2.9.6
+MarkupSafe==1.0
+PyMySQL==0.7.11
+redis==2.10.6
+SQLAlchemy==1.1.12
+Werkzeug==0.12.2
+WTForms==2.1
